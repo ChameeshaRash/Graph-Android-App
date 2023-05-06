@@ -5,19 +5,36 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity"
+    android:orientation="vertical"
     android:layout_marginHorizontal="24dp"
-    android:layout_marginTop="48dp">
+    android:layout_marginTop="48dp"
+    >
 
     <RelativeLayout
+        android:id="@+id/topSection"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:orientation="vertical"
         android:paddingHorizontal="16dp"
-        android:background="@color/teal_700">
+        android:paddingVertical="16dp"
+        android:background="@color/teal">
 
         <TextView
+            android:id="@+id/mainText"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text=""/>
+            android:paddingBottom="96dp"
+            android:text="@string/home_mainText"
+            android:textColor="@color/darkBlue"
+            android:textSize="36sp" />
+
+        <androidx.appcompat.widget.SearchView
+            android:id="@+id/search_bar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/mainText"
+            android:background="@color/white"
+            android:inputType="v"/>
 
     </RelativeLayout>
 

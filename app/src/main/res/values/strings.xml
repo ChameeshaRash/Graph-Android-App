@@ -1,3 +1,12 @@
 <resources>
     <string name="app_name">Graph</string>
+    <string name="home_mainText">Experience functions in AR</string>
+    <string name="searchBarText">Search here</string>
+
+
+    <string name="catenoid">Catenoid</string>
+    <string name="catenoid_Description">The catenoid is a minimal surface that arises as the shape of a soap film spanning two circular rings.</string>
+
+
+
 </resources>
