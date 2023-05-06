@@ -17,7 +17,7 @@
         android:orientation="vertical"
         android:paddingHorizontal="16dp"
         android:paddingVertical="16dp"
-        android:background="@color/teal">
+        android:background="@drawable/top_section_background">
 
         <TextView
             android:id="@+id/mainText"
@@ -33,8 +33,30 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_alignBottom="@+id/mainText"
-            android:background="@color/white"
-            android:inputType="v"/>
+            android:background="@drawable/rounded_search_view_background"
+            android:textSize="16sp"
+            android:queryHint="@string/searchBarText"
+            app:voiceIcon="@drawable/ic_microphone"
+            />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/bottomSection"
+        android:layout_below="@+id/topSection"
+        android:layout_marginTop="16dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingHorizontal="16dp"
+        android:paddingVertical="16dp"
+        android:layout_marginBottom="24dp"
+        android:background="@drawable/bottom_section_background">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recycler_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
 
     </RelativeLayout>
 
