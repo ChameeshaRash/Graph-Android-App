@@ -14,14 +14,13 @@
         android:src="@drawable/ic_launcher_background"/>
 
     <TextView
-        android:id="@+id/text_view"
+        android:id="@+id/nameText_view"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center_vertical"
         android:textColor="@color/darkGray"
         android:layout_weight="1"
         android:layout_marginHorizontal="16dp"
-        android:text="Lorem Ipsum Dolor"
         android:textSize="24sp" />
 
     <ImageView

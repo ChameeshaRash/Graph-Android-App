@@ -11,26 +11,26 @@ import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
 
+    ArrayList<ModelItem> modelItems = new ArrayList<>();
+    int []model_Images={R.drawable.catenoid,R.drawable.ellipsoid,R.drawable.helicoid,R.drawable.hyperbolic_paraboloid,R.drawable.hyperboloid,R.drawable.mobius_strip,R.drawable.paraboloid,R.drawable.torus};
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
         RecyclerView recyclerView = findViewById(R.id.recycler_view);
-
-
-        List<CardItem> cardItems = new ArrayList<>();
-        cardItems.add(new CardItem(R.drawable.card_thumbnail_catenoid,R.string.catenoid));
-        cardItems.add(new CardItem(R.drawable.card_thumbnail_catenoid,R.string.catenoid));
-        cardItems.add(new CardItem(R.drawable.card_thumbnail_catenoid,R.string.catenoid));
-        cardItems.add(new CardItem(R.drawable.card_thumbnail_catenoid,R.string.catenoid));
-        cardItems.add(new CardItem(R.drawable.card_thumbnail_catenoid,R.string.catenoid));
-
-
-
-
+        setCardItems();
+        recyclerView.setAdapter(new ModelItemsAdapter(getApplicationContext(),modelItems));
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
-        recyclerView.setAdapter(new RecyclerviewAdapter(getApplicationContext(),cardItems));
 
+    }
+    public void setCardItems(){
+
+        String []modelName=getResources().getStringArray(R.array.txtModel_Types);
+        for(int i=0;i<modelName.length;i++){
+            modelItems.add(new ModelItem(model_Images[i],modelName[i]));
+        }
     }
 }

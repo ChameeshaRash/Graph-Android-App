@@ -4,9 +4,27 @@
     <string name="searchBarText">Search here</string>
 
 
-    <string name="catenoid">Catenoid</string>
-    <string name="catenoid_Description">The catenoid is a minimal surface that arises as the shape of a soap film spanning two circular rings.</string>
+    <!--3D objects-->
+    <string-array name="txtModel_Types">
+        <item>Catenoid</item>
+        <item>Ellipsoid</item>
+        <item>Helicoid</item>
+        <item>Hyperbolic Paraboloid</item>
+        <item>Hyperboloid</item>
+        <item>Mobius Strip</item>
+        <item>Paraboloid</item>
+        <item>Torus</item>
+    </string-array>
+    <string-array name="txtModel_Des">
+        <item>The catenoid is a minimal surface that arises as the shape of a soap film spanning two circular rings.</item>
+        <item>An ellipsoid is a three-dimensional geometric shape resembling a stretched sphere. It is defined by three perpendicular axes of different lengths, and it can be described as a surface obtained by rotating an ellipse about one of its axes.</item>
+        <item>A helicoid is a three-dimensional curved surface that resembles a spiral staircase. It can be formed by twisting a straight line around a central axis, resulting in a surface that spirals up or down along the length of the axis.</item>
+        <item>A hyperbolic paraboloid is a three-dimensional shape that resembles a saddle or a Pringles potato chip. It is defined by two sets of intersecting straight lines that form a series of hyperbolic curves, resulting in a surface with both concave and convex regions.</item>
+        <item>A hyperboloid is a three-dimensional shape that resembles two hyperbolas connected at their vertices. It can be formed by rotating a hyperbola around its axis, resulting in a surface with two distinct sheets and a central waist.</item>
+        <item>A Möbius strip is a two-dimensional surface with only one side and one edge. It is formed by taking a strip of paper, giving it a half-twist, and then joining the ends together. A Möbius strip has many interesting mathematical properties and is often used as a symbol of infinity or continuity.</item>
+        <item>A paraboloid is a three-dimensional shape that resembles a bowl or a satellite dish. It can be formed by rotating a parabola around its axis, resulting in a surface with a single, concave bowl-shaped region.</item>
+        <item>A torus is a three-dimensional shape that resembles a doughnut or a lifebuoy. It can be formed by rotating a circle around an axis that lies in the same plane as the circle, resulting in a surface with a hole in the middle and a circular cross-section.</item>
 
-
+    </string-array>
 
 </resources>
