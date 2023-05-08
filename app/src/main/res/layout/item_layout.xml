@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity2"
+    android:orientation="vertical"
+    android:layout_marginHorizontal="24dp"
+    android:layout_marginTop="48dp"
+    >
+    <TextView
+        android:id="@+id/modelTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="96dp"
+        android:textColor="@color/darkBlue"
+        android:textSize="36sp" />
+    <TextView
+        android:id="@+id/modelDescription"
+        android:layout_below="@id/modelTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/home_mainText"
+        android:textColor="@color/darkBlue"
+        android:textSize="24sp" />
+
+    <ImageView
+        android:id="@+id/modelImage"
+        android:layout_below="@id/modelDescription"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/ic_launcher_background"
+        />
+
+
+</RelativeLayout>
