@@ -23,7 +23,17 @@
         </activity>
         <activity
             android:name=".MainActivity2"
-            android:exported="false" />
+            android:exported="true" >
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+                <data android:scheme="https" />
+                <data android:host="firebasestorage.googleapis.com" />
+                <data android:pathPrefix="/v0/b/graph-54ff0.appspot.com%2Fcatenoid.glb?alt=media" />
+            </intent-filter>
+
+        </activity>
     </application>
 
 </manifest>
