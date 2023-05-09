@@ -26,5 +26,7 @@
         <item>A torus is a three-dimensional shape that resembles a doughnut or a lifebuoy. It can be formed by rotating a circle around an axis that lies in the same plane as the circle, resulting in a surface with a hole in the middle and a circular cross-section.</item>
 
     </string-array>
+<!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 
 </resources>

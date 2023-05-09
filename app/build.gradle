@@ -8,7 +8,7 @@ android {
 
     defaultConfig {
         applicationId "com.university.graph"
-        minSdk 21
+        minSdk 24
         targetSdk 32
         versionCode 1
         versionName "1.0"
@@ -39,5 +39,7 @@ dependencies {
     implementation 'com.google.firebase:firebase-storage:20.2.0'
     implementation platform('com.google.firebase:firebase-bom:32.0.0')
     implementation 'com.google.firebase:firebase-analytics'
+    implementation "com.gorisse.thomas.sceneform:sceneform:1.21.0"
+
 
 }

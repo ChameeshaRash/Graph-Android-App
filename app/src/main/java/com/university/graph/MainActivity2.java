@@ -35,10 +35,12 @@ public class MainActivity2 extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                String url = "https://firebasestorage.googleapis.com/v0/b/graph-54ff0.appspot.com%2Fcatenoid.glb?alt=media";
-                Intent intent = new Intent(Intent.ACTION_VIEW);
-                intent.setData(Uri.parse("googlear://scene-viewer/1?file=" + url));
-                intent.setPackage("com.google.android.googlequicksearchbox");
+//                String url = "https://firebasestorage.googleapis.com/v0/b/graph-54ff0.appspot.com%2Fcatenoid.glb?alt=media";
+//                Intent intent = new Intent(Intent.ACTION_VIEW);
+//                intent.setData(Uri.parse("googlear://scene-viewer/1?file=" + url));
+//                intent.setPackage("com.google.android.googlequicksearchbox");
+//                startActivity(intent);
+                Intent intent=new Intent(MainActivity2.this,MainActivity3.class);
                 startActivity(intent);
             }
         });
