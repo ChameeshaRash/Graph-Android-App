@@ -10,6 +10,6 @@ public class MainActivity3 extends AppCompatActivity {
         setContentView(R.layout.activity_main3);
         arFragment = (ArFragment) getSupportFragmentManager().findFragmentById(R.id.arFragment);
         arFragment.setOnTapPlaneGlbModel("catenoid.glb");
-        //        arFragment.setOnTapPlaneGlbModel("https://github.com/codemaker2015/3d-models/blob/master/glb_files/model.glb?raw=true");
+//                arFragment.setOnTapPlaneGlbModel("https://github.com/codemaker2015/3d-models/blob/master/glb_files/model.glb?raw=true");
     }
 }

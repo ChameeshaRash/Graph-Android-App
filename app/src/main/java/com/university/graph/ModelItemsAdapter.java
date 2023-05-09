@@ -1,5 +1,6 @@
 package com.university.graph;
 
+import android.annotation.SuppressLint;
 import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -10,13 +11,16 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class ModelItemsAdapter extends RecyclerView.Adapter<ModelItemsAdapter.ViewHolder> {
-private  final ModelItemsInterface modelItemsInterface;
-    private Context context;
-    private  List<ModelItem> modelItems;
-    private LayoutInflater inflater;
+    ModelItemsInterface modelItemsInterface;
+    Context context;
+    private List<ModelItem> modelItems;
+    private final LayoutInflater inflater;
+
+
 
     public ModelItemsAdapter(Context context, List<ModelItem> modelItems,ModelItemsInterface modelItemsInterface) {
         this.context = context;
@@ -25,6 +29,14 @@ private  final ModelItemsInterface modelItemsInterface;
         this.modelItemsInterface=modelItemsInterface;
     }
 
+    @SuppressLint("NotifyDataSetChanged")
+    public void setFilteredList(ArrayList<ModelItem> filteredList){
+
+        modelItems = filteredList;
+        notifyDataSetChanged();
+
+
+    }
 
 
     @NonNull

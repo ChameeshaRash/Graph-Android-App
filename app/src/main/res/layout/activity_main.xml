@@ -29,15 +29,14 @@
             android:textSize="36sp" />
 
         <androidx.appcompat.widget.SearchView
-            android:id="@+id/search_bar"
+            android:id="@+id/search_view"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_alignBottom="@+id/mainText"
             android:background="@drawable/rounded_search_view_background"
-            android:textSize="16sp"
             android:queryHint="@string/searchBarText"
-            app:voiceIcon="@drawable/ic_microphone"
-            />
+            android:textSize="16sp"
+            app:voiceIcon="@drawable/ic_microphone" />
 
     </RelativeLayout>
 
