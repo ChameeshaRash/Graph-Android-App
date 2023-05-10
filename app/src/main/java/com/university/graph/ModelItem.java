@@ -5,8 +5,16 @@ public class ModelItem {
     public int modelImage;
     public String modelName;
     public String modelDescription;
+    public String urlModelName;
 
 
+
+    public ModelItem(int modelImage, String modelName, String modelDescription, String urlModelName) {
+        this.modelImage = modelImage;
+        this.modelName = modelName;
+        this.modelDescription = modelDescription;
+        this.urlModelName = urlModelName;
+    }
 
     public ModelItem(int modelImage, String modelName, String modelDescription) {
         this.modelImage = modelImage;
@@ -42,5 +50,12 @@ public class ModelItem {
 
     public void setModelDescription(String modelDescription) {
         this.modelDescription = modelDescription;
+    }
+    public String getUrlModelName() {
+        return urlModelName;
+    }
+
+    public void setUrlModelName(String urlModelName) {
+        this.urlModelName = urlModelName;
     }
 }

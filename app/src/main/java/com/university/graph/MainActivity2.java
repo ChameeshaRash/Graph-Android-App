@@ -1,7 +1,6 @@
 package com.university.graph;
 
 import android.content.Intent;
-import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -11,7 +10,12 @@ import android.widget.TextView;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
-public class MainActivity2 extends AppCompatActivity {
+import java.util.ArrayList;
+
+public class MainActivity2 extends AppCompatActivity implements ModelItemsInterface {
+
+    ArrayList<ModelItem> modelItems = new ArrayList<>();
+
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -34,19 +38,19 @@ public class MainActivity2 extends AppCompatActivity {
         btnModelImage.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
-//                String url = "https://firebasestorage.googleapis.com/v0/b/graph-54ff0.appspot.com%2Fcatenoid.glb?alt=media";
-//                Intent intent = new Intent(Intent.ACTION_VIEW);
-//                intent.setData(Uri.parse("googlear://scene-viewer/1?file=" + url));
-//                intent.setPackage("com.google.android.googlequicksearchbox");
-//                startActivity(intent);
-                Intent intent=new Intent(MainActivity2.this,MainActivity3.class);
-                startActivity(intent);
+               onItemClick(imgModel);
             }
         });
+
+
 
     }
 
 
-
+    @Override
+    public void onItemClick(int position) {
+        Intent intent=new Intent(MainActivity2.this,MainActivity3.class);
+        intent.putExtra("URL_MODEL_IMG",modelItems.get(position).getUrlModelName());
+        startActivity(intent);
+    }
 }

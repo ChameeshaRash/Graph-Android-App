@@ -13,11 +13,13 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Locale;
 
 public class ModelItemsAdapter extends RecyclerView.Adapter<ModelItemsAdapter.ViewHolder> {
     ModelItemsInterface modelItemsInterface;
     Context context;
-    private List<ModelItem> modelItems;
+    private  List<ModelItem> modelItems;
+    private  static List<ModelItem> m;
     private final LayoutInflater inflater;
 
 
@@ -27,6 +29,7 @@ public class ModelItemsAdapter extends RecyclerView.Adapter<ModelItemsAdapter.Vi
         this.modelItems = modelItems;
         this.inflater=LayoutInflater.from(context);
         this.modelItemsInterface=modelItemsInterface;
+        m=modelItems;
     }
 
     @SuppressLint("NotifyDataSetChanged")
@@ -67,23 +70,28 @@ public class ModelItemsAdapter extends RecyclerView.Adapter<ModelItemsAdapter.Vi
     public static class ViewHolder extends RecyclerView.ViewHolder{
         ImageView iconImage;
         TextView itemName;
-        public ViewHolder(View itemView,ModelItemsInterface modelItemsInterface){
+        public ViewHolder(View itemView, ModelItemsInterface modelItemsInterface){
             super(itemView);
-            iconImage=itemView.findViewById(R.id.image_view);
-            itemName=itemView.findViewById(R.id.nameText_view);
+            iconImage = itemView.findViewById(R.id.image_view);
+            itemName = itemView.findViewById(R.id.nameText_view);
 
             itemView.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    if(modelItemsInterface !=null){
-                        int pos=getAdapterPosition();
-                        if(pos!=RecyclerView.NO_POSITION){
-                            modelItemsInterface.onItemClick(pos);
+                    if (modelItemsInterface != null) {
+                        int pos = getAdapterPosition();
+                        String itemNameStr = itemName.getText().toString();
+                        if (pos != RecyclerView.NO_POSITION) {
+                            for (int i = 0; i < m.size(); i++) {
+                                if (m.get(i).getModelName().equals(itemNameStr)) {
+                                    modelItemsInterface.onItemClick(i);
+                                    break;
+                                }
+                            }
                         }
                     }
                 }
             });
         }
-
     }
 }

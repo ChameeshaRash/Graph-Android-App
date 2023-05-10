@@ -28,6 +28,7 @@ public class MainActivity extends AppCompatActivity implements ModelItemsInterfa
         //for searching
         searchView=findViewById(R.id.search_view);
         searchView.clearFocus();
+
         searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
             @Override
             public boolean onQueryTextSubmit(String query) {
@@ -50,6 +51,7 @@ public class MainActivity extends AppCompatActivity implements ModelItemsInterfa
 
     }
 
+
     //filterList method
     public void filterList(String text) {
 
@@ -64,8 +66,10 @@ public class MainActivity extends AppCompatActivity implements ModelItemsInterfa
         } else {
             ModelItemsAdapter adapter = new ModelItemsAdapter(getApplicationContext(), modelItems, this);
             adapter.setFilteredList(filteredList);
+
             recyclerView.setAdapter(adapter);
         }
+
     }
 
     //setCardItems method
