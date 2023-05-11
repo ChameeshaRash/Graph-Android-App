@@ -7,7 +7,7 @@
     tools:context=".MainActivity"
     android:orientation="vertical"
     android:layout_marginHorizontal="24dp"
-    android:layout_marginTop="48dp"
+    android:layout_marginTop="24dp"
     >
 
     <RelativeLayout
@@ -23,20 +23,26 @@
             android:id="@+id/mainText"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:paddingBottom="96dp"
+            android:paddingBottom="64dp"
             android:text="@string/home_mainText"
             android:textColor="@color/darkBlue"
+            android:fontFamily="@font/circularstdbold"
+            android:lineHeight="56sp"
             android:textSize="36sp" />
 
         <androidx.appcompat.widget.SearchView
-            android:id="@+id/search_bar"
+            android:id="@+id/search_view"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_alignBottom="@+id/mainText"
+            android:backgroundTint="@color/white"
             android:background="@drawable/rounded_search_view_background"
-            android:textSize="16sp"
             android:queryHint="@string/searchBarText"
-            app:voiceIcon="@drawable/ic_microphone"
+            android:textSize="18sp"
+            android:layoutDirection="rtl"
+            app:iconifiedByDefault="false"
+
+
             />
 
     </RelativeLayout>
@@ -57,6 +63,7 @@
             android:id="@+id/recycler_view"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+
             android:background="@drawable/recycler_view_background"
             />
 
